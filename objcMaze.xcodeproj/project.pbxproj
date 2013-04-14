@@ -10,6 +10,7 @@
 		EBF0643B171B24C7004384E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBF0643A171B24C7004384E5 /* Foundation.framework */; };
 		EBF0643E171B24C7004384E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF0643D171B24C7004384E5 /* main.m */; };
 		EBF06442171B24C7004384E5 /* objcMaze.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBF06441171B24C7004384E5 /* objcMaze.1 */; };
+		EBF0644A171B2567004384E5 /* NSMutableArray+NSMutableArray_Queueing.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF06449171B2567004384E5 /* NSMutableArray+NSMutableArray_Queueing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,13 @@
 		EBF0643D171B24C7004384E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EBF06440171B24C7004384E5 /* objcMaze-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "objcMaze-Prefix.pch"; sourceTree = "<group>"; };
 		EBF06441171B24C7004384E5 /* objcMaze.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = objcMaze.1; sourceTree = "<group>"; };
+		EBF06448171B2567004384E5 /* NSMutableArray+NSMutableArray_Queueing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+NSMutableArray_Queueing.h"; sourceTree = "<group>"; };
+		EBF06449171B2567004384E5 /* NSMutableArray+NSMutableArray_Queueing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+NSMutableArray_Queueing.m"; sourceTree = "<group>"; };
+		EBF0644C171B27D6004384E5 /* maze5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = maze5.txt; sourceTree = "<group>"; };
+		EBF0644D171B27D6004384E5 /* maze6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = maze6.txt; sourceTree = "<group>"; };
+		EBF0644E171B27D6004384E5 /* maze7.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = maze7.txt; sourceTree = "<group>"; };
+		EBF0644F171B27D6004384E5 /* maze8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = maze8.txt; sourceTree = "<group>"; };
+		EBF06450171B27D6004384E5 /* maze9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = maze9.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +81,12 @@
 		EBF0643C171B24C7004384E5 /* objcMaze */ = {
 			isa = PBXGroup;
 			children = (
+				EBF0644B171B274E004384E5 /* mazes */,
 				EBF0643D171B24C7004384E5 /* main.m */,
 				EBF06441171B24C7004384E5 /* objcMaze.1 */,
 				EBF0643F171B24C7004384E5 /* Supporting Files */,
+				EBF06448171B2567004384E5 /* NSMutableArray+NSMutableArray_Queueing.h */,
+				EBF06449171B2567004384E5 /* NSMutableArray+NSMutableArray_Queueing.m */,
 			);
 			path = objcMaze;
 			sourceTree = "<group>";
@@ -86,6 +97,18 @@
 				EBF06440171B24C7004384E5 /* objcMaze-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBF0644B171B274E004384E5 /* mazes */ = {
+			isa = PBXGroup;
+			children = (
+				EBF0644C171B27D6004384E5 /* maze5.txt */,
+				EBF0644D171B27D6004384E5 /* maze6.txt */,
+				EBF0644E171B27D6004384E5 /* maze7.txt */,
+				EBF0644F171B27D6004384E5 /* maze8.txt */,
+				EBF06450171B27D6004384E5 /* maze9.txt */,
+			);
+			name = mazes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBF0643E171B24C7004384E5 /* main.m in Sources */,
+				EBF0644A171B2567004384E5 /* NSMutableArray+NSMutableArray_Queueing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
