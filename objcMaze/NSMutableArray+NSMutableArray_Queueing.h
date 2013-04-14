@@ -11,6 +11,7 @@
 @interface NSMutableArray (NSMutableArray_Queueing)
 
 - (id) dequeue;
-- (void) queue: (id) obj;
+- (void) enqueue: (id) obj;
+- (BOOL) isEmpty;
 
 @end

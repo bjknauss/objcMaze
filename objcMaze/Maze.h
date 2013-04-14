@@ -18,8 +18,10 @@
 
 -(id) initWithDimension: (int) dimension;
 
+-(void) addRoom: (Room *) r;
 -(id) getRoom: (int) index;
 -(id) getRoom: (int) current inDirection:(char)dir;
+-(int) getRoomIndex: (int) currentRoom inDirection:(char) dir;
 -(BOOL) validNorth: (int) index;
 -(BOOL) validSouth: (int) index;
 -(BOOL) validEast:  (int) index;
@@ -29,5 +31,6 @@
 -(NSIndexSet *) getRowIndices: (int)row;
 -(NSArray *) getRow: (int)row;
 -(void) print;
+-(void) solve;
 
 @end

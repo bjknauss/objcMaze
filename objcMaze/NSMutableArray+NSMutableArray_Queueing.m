@@ -18,8 +18,12 @@
     [self removeObjectAtIndex:0];
     return obj;
 }
-- (void) queue : (id) obj {
+- (void) enqueue : (id) obj {
     [self addObject:obj];
+}
+
+- (BOOL) isEmpty {
+    return ([self count] == 0);
 }
 
 @end

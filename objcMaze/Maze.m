@@ -14,8 +14,30 @@
     self = [super init];
     if (self) {
         _dimension = dimension;
+        _rooms = [[NSMutableArray alloc] initWithCapacity:dimension];
     }
     return self;
+}
+
+-(void) solve {
+    int room = [_rooms count] - 1;
+    NSMutableArray *path = [[NSMutableArray alloc] init];
+    Room *r = [self getRoom:room];
+    while ([r hasParent]) {
+        [path addObject:[NSNumber numberWithInt:room]];
+        room = [r parent];
+        r = [self getRoom:room];
+    }
+    [path addObject: [NSNumber numberWithInt:0]];
+    NSMutableString *str = [NSMutableString stringWithString:@"The path: "];
+    for (id obj in [path reverseObjectEnumerator]) {
+        [str appendFormat:@" %@ ", obj];
+    }
+    NSLog(str);
+}
+
+-(void) addRoom:(Room *)r {
+    [_rooms addObject:r];
 }
 
 -(id) getRoom:(int)index{
@@ -105,6 +127,25 @@
     return nil;
 }
 
+-(int) getRoomIndex:(int)current inDirection:(char)dir {
+    switch (dir) {
+        case 'n':
+            return (current - _dimension);
+            break;
+        case 's':
+            return (current + _dimension);
+            break;
+        case 'e':
+            return (current + 1);
+            break;
+        case 'w':
+            return (current - 1);
+        default:
+            break;
+    }
+    return nil;
+}
+
 -(BOOL) isGoal:(int)roomIndex {
     if (([_rooms count]-1) == roomIndex) {
         return TRUE;
@@ -120,7 +161,7 @@
 
 -(NSIndexSet *) getRowIndices:(int)row {
     row = row * _dimension;
-    return [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(row, (_dimension-1))];
+    return [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(row, (_dimension))];
 }
 
 -(NSArray *) getRow: (int) row {
@@ -130,7 +171,7 @@
 -(void) print {
     for (int rowNum = 0; rowNum < _dimension; rowNum++) {
         NSArray *row = [self getRow:rowNum];
-        NSMutableString *northOutput = [NSMutableString init];
+        NSMutableString *northOutput = [[NSMutableString alloc] init];
         for (Room *r in row) {
             if ([r north]) {
                 [northOutput appendString:@" ____ "];
@@ -139,7 +180,7 @@
             }
         }
         NSLog(northOutput);
-        NSMutableString *midOutput = [NSMutableString init];
+        NSMutableString *midOutput = [[NSMutableString alloc] init];
         for (Room *r in row) {
             if ([r west]) {
                 [midOutput appendString:@"|    "];
@@ -153,7 +194,7 @@
             }
         }
         NSLog(midOutput);
-        NSMutableString *btmOutput = [NSMutableString init];
+        NSMutableString *btmOutput = [[NSMutableString alloc] init];
         for (Room *r in row) {
             if ([r west]) {
                 [btmOutput appendString:@"|"];
@@ -172,6 +213,7 @@
             }
         }
         NSLog(btmOutput);
+        
     }
 }
 
