@@ -11,6 +11,8 @@
 		EBF0643E171B24C7004384E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF0643D171B24C7004384E5 /* main.m */; };
 		EBF06442171B24C7004384E5 /* objcMaze.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = EBF06441171B24C7004384E5 /* objcMaze.1 */; };
 		EBF0644A171B2567004384E5 /* NSMutableArray+NSMutableArray_Queueing.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF06449171B2567004384E5 /* NSMutableArray+NSMutableArray_Queueing.m */; };
+		EBF06453171B2B2D004384E5 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF06452171B2B2D004384E5 /* Room.m */; };
+		EBF06456171B31E9004384E5 /* Maze.m in Sources */ = {isa = PBXBuildFile; fileRef = EBF06455171B31E9004384E5 /* Maze.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +41,10 @@
 		EBF0644E171B27D6004384E5 /* maze7.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = maze7.txt; sourceTree = "<group>"; };
 		EBF0644F171B27D6004384E5 /* maze8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = maze8.txt; sourceTree = "<group>"; };
 		EBF06450171B27D6004384E5 /* maze9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = maze9.txt; sourceTree = "<group>"; };
+		EBF06451171B2B2D004384E5 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		EBF06452171B2B2D004384E5 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
+		EBF06454171B31E9004384E5 /* Maze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Maze.h; sourceTree = "<group>"; };
+		EBF06455171B31E9004384E5 /* Maze.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Maze.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,10 @@
 				EBF0643F171B24C7004384E5 /* Supporting Files */,
 				EBF06448171B2567004384E5 /* NSMutableArray+NSMutableArray_Queueing.h */,
 				EBF06449171B2567004384E5 /* NSMutableArray+NSMutableArray_Queueing.m */,
+				EBF06451171B2B2D004384E5 /* Room.h */,
+				EBF06452171B2B2D004384E5 /* Room.m */,
+				EBF06454171B31E9004384E5 /* Maze.h */,
+				EBF06455171B31E9004384E5 /* Maze.m */,
 			);
 			path = objcMaze;
 			sourceTree = "<group>";
@@ -164,6 +174,8 @@
 			files = (
 				EBF0643E171B24C7004384E5 /* main.m in Sources */,
 				EBF0644A171B2567004384E5 /* NSMutableArray+NSMutableArray_Queueing.m in Sources */,
+				EBF06453171B2B2D004384E5 /* Room.m in Sources */,
+				EBF06456171B31E9004384E5 /* Maze.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
